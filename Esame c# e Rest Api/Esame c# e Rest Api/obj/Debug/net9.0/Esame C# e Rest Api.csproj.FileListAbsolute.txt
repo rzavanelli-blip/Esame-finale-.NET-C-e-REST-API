@@ -1,0 +1,37 @@
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\appsettings.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Esame C# e Rest Api.staticwebassets.endpoints.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Esame C# e Rest Api.exe
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Esame C# e Rest Api.deps.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Esame C# e Rest Api.runtimeconfig.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Esame C# e Rest Api.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Esame C# e Rest Api.pdb
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.csproj.AssemblyReference.cache
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.AssemblyInfoInputs.cache
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.AssemblyInfo.cs
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.csproj.CoreCompileInputs.cache
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.sourcelink.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\scopedcss\bundle\Esame C# e Rest Api.styles.css
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\refint\Esame C# e Rest Api.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.pdb
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\Esame C# e Rest Api.genruntimeconfig.cache
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\obj\Debug\net9.0\ref\Esame C# e Rest Api.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame C# e Rest Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\rober\source\repos\Esame c# e Rest Api\Esame c# e Rest Api\obj\Debug\net9.0\Esame c#.3CC9445B.Up2Date

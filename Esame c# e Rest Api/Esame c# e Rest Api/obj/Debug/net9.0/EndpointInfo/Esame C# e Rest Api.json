@@ -1,0 +1,573 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Esame c# e Rest Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/login": {
+      "post": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Effettua il login",
+        "description": "Login con username e password. Se corrette, restituisce un token da usare negli header (chiave 'Access') per accedere agli altri endpoint.",
+        "operationId": "Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Credenziali"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/studenti": {
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Ottieni tutti gli studenti",
+        "description": "Restituisce la lista completa degli studenti con i corsi a cui sono iscritti.",
+        "operationId": "GetStudenti",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Studente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Crea un nuovo studente",
+        "description": "Aggiunge un nuovo studente alla lista.",
+        "operationId": "CreateStudente",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Studente"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Studente"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/studenti/{id}": {
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Ottieni un singolo studente",
+        "description": "Restituisce i dettagli di uno studente specifico in base all'ID.",
+        "operationId": "GetStudenteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Studente"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Aggiorna uno studente",
+        "description": "Modifica nome e cognome di uno studente esistente.",
+        "operationId": "UpdateStudente",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Studente"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Elimina uno studente",
+        "description": "Rimuove uno studente dalla lista tramite ID.",
+        "operationId": "DeleteStudente",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/iscrizioni": {
+      "post": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Crea una nuova iscrizione",
+        "description": "Iscrive uno studente a un corso e assegna automaticamente la data come stringa.",
+        "operationId": "CreateIscrizione",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Iscrizione"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Iscrizione"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Ottieni tutte le iscrizioni",
+        "description": "Restituisce la lista completa delle iscrizioni studente-corso.",
+        "operationId": "GetIscrizioni",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Iscrizione"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/studenti/{id}/corsi": {
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/corsi/{id}/studenti": {
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/corsi": {
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Ottieni tutti i corsi",
+        "description": "Restituisce la lista completa dei corsi disponibili.",
+        "operationId": "GetCorsi",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Corso"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Crea un nuovo corso",
+        "description": "Aggiunge un nuovo corso all'elenco.",
+        "operationId": "CreateCorso",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Corso"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Corso"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/corsi/{id}": {
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Ottieni un singolo corso",
+        "description": "Restituisce i dettagli di un corso specifico in base all'ID.",
+        "operationId": "GetCorsoById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Corso"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Aggiorna un corso",
+        "description": "Modifica nome e descrizione di un corso esistente.",
+        "operationId": "UpdateCorso",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Corso"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Elimina un corso",
+        "description": "Rimuove un corso dall'elenco tramite ID.",
+        "operationId": "DeleteCorso",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/studenti/{studenteId}/corsi": {
+      "get": {
+        "tags": [
+          "Esame c# e Rest Api"
+        ],
+        "summary": "Ottieni i corsi di uno studente",
+        "description": "Restituisce tutti i corsi a cui è iscritto uno studente dato il suo ID.",
+        "operationId": "GetCorsiStudente",
+        "parameters": [
+          {
+            "name": "studenteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Corso"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Corso": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomeCorso": {
+            "type": "string",
+            "nullable": true
+          },
+          "descrizione": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Credenziali": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Iscrizione": {
+        "type": "object",
+        "properties": {
+          "studenteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "corsoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataIscrizione": {
+            "type": "string",
+            "nullable": true
+          },
+          "stato": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Studente": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "cognome": {
+            "type": "string",
+            "nullable": true
+          },
+          "corsiIscritti": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Corso"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
